@@ -27,17 +27,17 @@ credit.textContent = `Created by ${yourName}`
 let gbTotal = document.querySelector("#qty-gb")
 let ccTotal = document.querySelector("#qty-cc")
 let sugarTotal = document.querySelector("#qty-sugar")
-let overallTotal = document.querySelector("#qty-total")
+let overallTotal = document.querySelector("#qty-total")// All the variables related to the total of all items are declared here.
 
 let gbPlusBtn = document.querySelector("#add-gb")
 let gbMinusBtn = document.querySelector("#minus-gb")
 let ccPlusBtn = document.querySelector("#add-cc")
 let ccMinusBtn = document.querySelector("#minus-cc")
 let sugarPlusBtn = document.querySelector("#add-sugar")
-let sugarMinusBtn = document.querySelector("#minus-sugar")
+let sugarMinusBtn = document.querySelector("#minus-sugar")// All the variables related to the buttons are declared here.
 
 function updateGb(displayGbTotal){
-    let gbTotal = document.querySelector("#qty-gb")
+    let gbTotal = document.querySelector("#qty-gb")// These functions select each quantity and updates each total
     gbTotal.textContent = gb
 }
 function updateCc(displayCcTotal){
@@ -53,7 +53,7 @@ function updateQuantity(displayQuantityTotal){
     overallTotal.textContent = total
 }
 
-gbPlusBtn.addEventListener('click', function(){
+gbPlusBtn.addEventListener('click', function(){// these event listeners check for a click on each button and increments or decrements the total of each item as well as adds or subtracts all values together.
     ++gb
     ++total
     updateQuantity(total) 
@@ -95,4 +95,3 @@ sugarMinusBtn.addEventListener('click', function(){
 })
 
 
-// TODO: Hook up event listeners for the rest of the buttons
